@@ -1,0 +1,127 @@
+#problema1
+num=sample(-50:50,10)
+num
+num2=0
+for (j in 1:length(num)){
+  if (num[j]>0){
+    num2[j]="positivo"
+  }
+  else{
+    num2[j]="negativo"
+  }
+}
+num2
+
+#problema2
+num <- round(rnorm(100, 100, 50))
+num
+contador_par=0
+contador_impar=0
+par <- 0
+for (j in 1:length(num)) {
+  if (num[j] %% 2 == 0) {
+    par[j] <- "par"
+    contador_par=contador_par+1
+  } else {
+    par[j] <- "impar"
+    contador_impar=contador_impar+1
+  }
+}
+print(paste('el numero de pares es :',contador_par))
+print(paste('el numero de impares es :',contador_impar))
+par
+#problema3
+numero <- as.integer(readline(prompt = "Ingresa un número entero: "))
+resultado=1
+for (j in 1:numero) {
+  resultado=resultado+j
+}
+resultado
+
+#problema4
+num <- 20
+num1 <- 0
+num2 <- 1
+sum_num <- 0
+
+for (j in 1:num) {
+  sum_num <- num1 + num2
+  num1 <- num2
+  num2 <- sum_num
+  print(num1)
+}
+#problema5
+num <- 6
+resultado=1
+contador=1
+for (i in 1:num){
+  resultado=resultado*i
+}
+resultado
+#problema6
+num=sample(1:100,1)
+num
+while (TRUE){
+  numero <- as.integer(readline(prompt = "Ingresa un número a adivinar: "))
+  if (numero > num){
+    print(paste("el numero es mas bajo"))
+  }
+  else if(numero<num){
+    print(paste("el numero es mas alto"))
+  }
+  else if (numero==num){
+    print(paste("elegiste el numero correcto"))
+    break
+  }
+}
+#problema7
+contraseña<-readline(prompt = "Ingresa su contraseña: ")
+intentos<-0
+while (intentos<=3) {
+  comprobasion<-readline(prompt = "Verificar su contraseña: ")
+  if (comprobasion!=contraseña) {
+    print(paste("contraseña incorresta"))
+    intentos<-intentos+1
+  }
+  else{
+    print(paste("contraseña correcta"))
+    intentos<-intentos+1
+  }
+}
+#problema8
+sum_digitos<-0
+num<-as.integer(readline(prompt = "Ingresa el numero: "))
+digitos <- as.numeric(unlist(strsplit(as.character(num), "")))
+sum_digitos<-sum(digitos)
+sum_digitos
+
+#problema9
+altura <- 3  # Altura de la pirámide
+for (i in 1:altura) {
+  # La función `strrep` repite el carácter "*" el número de veces indicado
+  piramide <- strrep("*", i)
+  print(piramide)
+}
+
+#problema10
+for (i in 1:100) {
+  if (i < 2) {
+    next  
+  }
+  
+  es_primo <- TRUE 
+  for (j in 2:sqrt(i)) {  
+    if (i %% j == 0) {
+      es_primo <- FALSE 
+      break  
+    }
+  }
+  
+  if (es_primo) {
+    print(paste(i, 'es primo'))
+  }
+}
+
+
+
+  
