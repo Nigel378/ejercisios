@@ -96,9 +96,8 @@ sum_digitos<-sum(digitos)
 sum_digitos
 
 #problema9
-altura <- 3  # Altura de la pirámide
+altura <- 3 
 for (i in 1:altura) {
-  # La función `strrep` repite el carácter "*" el número de veces indicado
   piramide <- strrep("*", i)
   print(piramide)
 }
@@ -121,7 +120,3 @@ for (i in 1:100) {
     print(paste(i, 'es primo'))
   }
 }
-
-
-
-  
